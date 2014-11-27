@@ -9,7 +9,7 @@ class UpdateUsersTable extends Migration {
 	 *
 	 * @return void
 	 */
-	public function up()
+	public function update()
 	{
 		// Update the users table
 		Schema::table('users', function($table){

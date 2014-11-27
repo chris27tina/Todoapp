@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.scaffold')
 
 @section('main')
 <html lang="en"><head>
@@ -297,7 +297,7 @@ b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
       {{ $errors->first('terms', '<span class="help-block">:message</span>') }}
     </div>
         
-        <button class="btn btn-login" type="submit">Sign Up</button>
+        <button class="btn btn-login" type="submit">login</button>
 
         <div class="registration">
             Already Registered?

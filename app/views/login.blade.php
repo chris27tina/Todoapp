@@ -9,7 +9,7 @@
   <!-- CSRF Token -->
   <input class="form-control" type="hidden" name="_token" value="{{ csrf_token() }}" />
   
-  <h2 class="form-signin-heading" style="background:#298A08;">Sign in into your account</h2>
+  <h2 class="form-signin-heading" style="background:#298A08;">Welcome to Taka app blog</h2>
   <div class="login-wrap">
     <!-- Email -->
     <div class="control-group{{ $errors->first('email', ' error') }}">
@@ -34,16 +34,11 @@
     <div class="control-group">
       <button type="submit" class="btn btn-lg btn-login btn-block">Sign in</button>
     </div>
-      <div class="registration">
-          Don't have an account yet?
-          <a class="" href="{{ route('signup') }}"><br>
-              Create an account
-          </a>
-      </div>
-    </div>
-</form>
-</div>
-    </body>
+    
 
-<!-- Mirrored from www.Mafundi.com/ by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 20 Feb 2014 19:02:05 GMT -->
-</html>
+    <div class="registration">
+            Dont have an Account?
+            <a class="pull-right" href="{{ route('signup') }}">
+                Sign Up Here
+            </a>
+        </div>

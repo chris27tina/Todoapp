@@ -427,7 +427,7 @@ class UsersController extends AdminController {
 
 			
 
-			// Update the user
+			Update the user
 			$user->first_name  = Input::get('first_name');
 			$user->last_name   = Input::get('last_name');
 			$user->image       = Input::get('image');
@@ -441,7 +441,7 @@ class UsersController extends AdminController {
 			$user->activated   = Input::get('activated', $user->activated);
 			$user->permissions = Input::get('permissions');
 
-			//updating profile image
+			updating profile image
 			if (Input::hasFile('image')) {
 				$file            = Input::file('image');
 				$destinationPath = public_path().'/uploads/users/image/';

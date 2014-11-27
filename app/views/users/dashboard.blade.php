@@ -1,4 +1,4 @@
-@extends('layouts.fundi')
+@extends('layouts.scaffold')
 
 @section('css')
 		{{ HTML::style('/bootstrap/3.0.2/css/bootstrap.min.css') }}

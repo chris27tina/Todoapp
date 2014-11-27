@@ -1,0 +1,226 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	font-family: 'Muli', sans-serif;
+}
+
+header{
+	background-color: rgba(255,185,15,0.9);
+	position: fixed;
+	width: 100%;
+	min-height: 70px;
+	top: 0;
+	bottom: 0;
+	z-index: -1000;
+}
+/*Start Home*/
+
+#home{
+	background: url(../../assets/images/nature.jpg);
+	background-attachment: fixed;
+	min-height: 630px;
+}
+/*End Home*/
+
+/*start pages*/
+.pages ul{
+	text-align: right;
+	padding: 60px 40px 0 0;
+}
+.pages ul li{
+	display: inline;
+	padding: 10px 10px;
+}
+
+.pages ul li a{
+	text-decoration: none;
+	font-size: 18px;
+	color: #000;
+}
+
+.pages ul li a:hover{
+	color: rgba(255,165,0,0.8);
+}
+/*End pages*/
+
+/*Start Text in Homepage*/
+#home h1{
+	/*color: rgba(255,255,255,0.9);*/
+	color:rgba(255,185,15,0.9);
+	text-align: center;
+	margin: 130px 0 0 0; 
+	font-size: 80px;
+}
+
+p#About_Taka{
+	text-align: center;
+	margin: 20px 0 0 0;
+	color: rgba(255,255,255,0.9);
+	font-size: 19px;
+	line-height: 1.5em;
+}
+/*End Text in Home Page*/ 
+
+/*Start the team section*/
+
+div#team{
+	background-color: #f6f8f9;
+	min-height: 540px;
+}
+
+div#team h1{
+	padding: 50px 0 0 0;
+	text-align: center;
+}
+
+#team img{
+	margin: 10px 13px;
+	border: 10px solid rgba(139,139,139,0.1);
+	border-radius: 50%
+}
+
+p.myProfile{
+	float: left;
+	text-align: center;
+	margin: 20px 0 0 70px;
+
+}
+
+p.myProfile1{
+	float: left;
+	text-align: center;
+	margin: 10px 0 0 150px;
+	text-align: center;
+}
+
+p.myProfile2{
+	float: left;
+	text-align: center;
+	margin: 10px 0 0 150px;
+
+}
+
+p.myProfile3{
+	float: left;
+	text-align: center;
+	margin: 10px 0 0 135px;
+
+}
+
+p.myProfile4{
+	float: left;
+	text-align: center;
+	margin: 10px 0 0 140px;
+
+}
+
+p.motto{
+	text-align: center;
+	font-style: italic;
+	margin-top: 60px;
+	padding-bottom: 20px; 
+}
+
+/*End the team section*/
+
+/*start contact section*/
+
+div#contact{
+	background: url(../images/footer-img.jpg) #fafafa;
+	background-size: 100% 100%;
+	margin: 20px 0 20px 0;
+	min-height:630px;
+}
+div.contact_text{
+	text-align: center;
+	color: rgba(255,255,255,0.8);
+	border: 1px solid transparent;
+	text-align: center;
+
+}
+
+h1 span.feedback{
+	color: #777777;
+	font-style: italic;
+	font-size: 0.5em;
+}
+
+h1 span.just_me{
+	font-size: 1.6em;
+}
+
+div.contact_text p{
+	margin: 70px 0 0 0;
+}
+
+div.form_holder{
+	border: 1px solid transparent;
+	float: left;
+	margin: 20px 0 0 160px;
+}
+
+form input{
+	padding: 20px 200px 20px 10px;
+	margin: 10px 100px 10px 0px;
+	border-radius: 5px;
+	border-width: 1px;
+	color: #888383;
+}
+
+textarea{
+	width: 480px;
+	padding: 10px 0px 175px 20px;
+	margin: 28px 100px 10px 0px;
+	border-radius: 5px; 
+	color: #888383;
+}
+
+div.submit_two a{
+	text-decoration: none;
+	color: rgba(255,255,255,0.8);
+}
+
+div.submit_two{
+	width: 100px;
+	padding: 10px 4px 10px 4px;
+	margin: 20px 200px 20px 20px;
+	/*background: -moz-linear-gradient(
+			#dde4f0,
+			#fff,
+			#e6ecf4,
+			 
+		);*/
+	background: rgba(255,185,15,0.9);
+	/*background: linear-gradient(
+			45deg, #dde4f0 0%,
+			#e5ebf4 70%, 
+			#e4ebf4 60%, 
+			#e6ebf4 50%);*/
+	border: 1px solid #cacccf;
+	text-align: center;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border-radius: 6px 6px 6px 6px;
+	/*border-radius: 50%;*/
+	float: right;
+}
+
+div.submit_two:hover{
+	background-color: rgba(50,50,50,0.9);
+}
+
+/*End contact section*/
+
+/*Back to Top*/
+#toTop{
+	display: none;
+	text-decoration: none;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	overflow: hidden;
+	width: 44px;
+	height: 44px;
+	border: none;
+	text-indent: 100%;
+	background: url(../../assets/images/top.png) no-repeat right top;
+}

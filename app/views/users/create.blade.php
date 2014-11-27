@@ -1,4 +1,4 @@
-@extends('layouts.fundi')
+@extends('layouts.scaffold')
 
 @section('main')
 

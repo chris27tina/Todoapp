@@ -6,7 +6,6 @@ class Todo extends Eloquent {
 	public static $rules = array(
 		'title' => 'required',
 		'content' => 'required',
-		'status' => 'required',
 		'user_id' => 'required'
 	);
 }

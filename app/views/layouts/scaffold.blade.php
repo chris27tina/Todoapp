@@ -2,6 +2,10 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		{{HTML::style('public/assets/css/main.css')}}
+		
+<link rel="stylesheet" href="assets/css/main.css"/>
+
 		<style>
 			table form { margin-bottom: 0; }
 			form ul { margin-left: 0; list-style: none; }

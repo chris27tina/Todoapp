@@ -23,6 +23,7 @@ class HomeController extends BaseController {
 					
 	}
 
+	
 	public function getHome()
 	{
 		if (Sentry::check()){

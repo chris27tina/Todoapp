@@ -553,7 +553,7 @@ class Connection implements ConnectionInterface {
 
 		$message = $e->getMessage()." (SQL: {$query}) (Bindings: {$bindings})";
 
-		throw new \Exception($message, 0, $e);
+		throw new \Exception($message, 0, $e());
 	}
 
 	/**

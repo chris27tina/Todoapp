@@ -132,53 +132,27 @@ class AuthController extends BaseController {
 	 * @return View
 	 */
 	public function getSignup()
-	{
+	{ 
+		echo "signup";
 		// Is the user logged in?
-		if (Sentry::check())
-		{
-			return Redirect::route('signup');
-		}
-		if (isset($_SERVER["HTTP_REFERER"]) && stripos($_SERVER["HTTP_REFERER"], 'auth/signup')){
-			return View::make('account.signup');
-		}
-		else if (isset($_SERVER["HTTP_REFERER"])){
-			// return var_dump($_SERVER["HTTP_REFERER"]);
-			// return View::make('account.signup-basic');
-			// return Response::view('account.signup-basic');
-			return Response::view('account.signup');
-		}
+		// if (Sentry::check())
+		// {
+		// 	return Redirect::route('home');
+		// }
+		// if (isset($_SERVER["HTTP_REFERER"]) && stripos($_SERVER["HTTP_REFERER"], 'auth/signup')){
+		// 	return View::make('account.signup');
+		// }
+		// else if (isset($_SERVER["HTTP_REFERER"])){
+		// 	// return var_dump($_SERVER["HTTP_REFERER"]);
+		// 	// return View::make('account.signup-basic');
+		// 	// return Response::view('account.signup-basic');
+		// 	return Response::view('account.signup');
+		// }
 		return View::make('account.signup');
 	}
 
 
-	/**
-	 * Account sign up.
-	 *
-	 * @return View
-	 */
-	public function getFundiSignup()
-	{
-		// Is the user logged in?
-		if (Sentry::check())
-		{
-			return Redirect::route('signup');
-		}
-		if (isset($_SERVER["HTTP_REFERER"]) && stripos($_SERVER["HTTP_REFERER"], 'auth/csignup')){
-			return View::make('account.csignup');
-		}
-		else if (isset($_SERVER["HTTP_REFERER"])){
-			// return var_dump($_SERVER["HTTP_REFERER"]);
-			// return View::make('account.signup-basic');
-			// return Response::view('account.signup-basic');
-			return Response::view('account.csignup');
-		}
-		return View::make('account.csignup');
-	}
-	/**
-	 * Account sign up form processing.
-	 *
-	 * @return Redirect
-	 */
+
 	public function postSignup()
 	{
 		$input = Input::all();
@@ -224,7 +198,7 @@ class AuthController extends BaseController {
 			if(!empty($input['company'])):
 				Company::create(array(
 					'name'=>$input['company'], 
-					'image'=>'no_logo.png', 
+					'image'=>'0.jpg', 
 					'banner'=>'banner'.rand(1, 4).'.png',
 					'creator'=>$user->id
 					));
@@ -233,7 +207,7 @@ class AuthController extends BaseController {
 			// Data to be used on the email view
 			$data = array(
 				'user'          => $user,
-				'activationUrl' => URL::route('activate', $user->getActivationCode()),
+				// 'activationUrl' => URL::route('activate', $user->getActivationCode()),
 			);
 
 			// Send the activation code through email
@@ -250,7 +224,7 @@ class AuthController extends BaseController {
 			}
 			else{
 				// return Redirect::back()->with('success', Lang::get('auth/message.signup.success'));
-				return Redirect::to('success');
+				return Redirect::to('login');
 			}
 		}
 		catch (Cartalyst\Sentry\Users\UserExistsException $e)
@@ -277,7 +251,7 @@ class AuthController extends BaseController {
 	public function postFundiSignup()
 	{
 
-		// 
+		
 		$input = Input::all();
 		// unset($input['company']);
 		// return var_dump($input);
@@ -337,7 +311,7 @@ class AuthController extends BaseController {
 			// Data to be used on the email view
 			$data = array(
 				'user'          => $user,
-				'activationUrl' => URL::route('activate', $user->getActivationCode()),
+				// 'activationUrl' => URL::route('activate', $user->getActivationCode()),
 			);
 
 			// Send the activation code through email
@@ -354,7 +328,7 @@ class AuthController extends BaseController {
 			}
 			else{
 				// return Redirect::back()->with('success', Lang::get('auth/message.signup.success'));
-				return Redirect::to('success');
+				return Redirect::to('login');
 			}
 		}
 		catch (Cartalyst\Sentry\Users\UserExistsException $e)

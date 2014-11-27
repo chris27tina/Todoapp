@@ -6,7 +6,7 @@
 <p>Welcome to Mafundis! Please click on the link below to confirm your Mafundis account. 
 	If the link is not clickable copy and paste it on your web browser:</p>
 
-<p><a href="{{ $activationUrl }}">{{ $activationUrl }}</a></p>
+<p><a href=""></a></p>
 
 <p>Best regards,</p>
 

@@ -2,6 +2,7 @@
 
 
 
+
 # Login
 Route::get('login', array('as' => 'signin', 'uses' => 'AuthController@getSignin'));
 Route::post('login', 'AuthController@postSignin');
@@ -46,7 +47,6 @@ Route::group(array('prefix' => 'user', 'before' => 'auth'), function()
 {
 
 	Route::resource('todos', 'TodosController');
-	Route::get('todos', array('as' => 'todos.index', 'uses' => 'TodosController@index'));
 
 });
 
